@@ -9,7 +9,7 @@
 
 
         <div class="flex flex-col space-y-5 justify-center items-center">
-            <div class="flex space-x-8">
+            <div class="flex items-center space-x-6">
                 <PieChart class="h-40 w-40"/>
                 <div>
                     <div class="space-y-4">
