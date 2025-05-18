@@ -1,0 +1,69 @@
+<template>
+  <div class="min-h-screen bg-gray-100 flex flex-col">
+    <!-- Header -->
+    <header class="fixed w-full top-0 text-center py-4 bg-white shadow">
+      <h1 class="text-lg font-semibold text-gray-800">Ерии ҳуқуқӣ</h1>
+    </header>
+
+    <!-- Chatbot Card -->
+    <main class="flex-1 flex flex-col items-center justify-start px-4 pt-32">
+      <div class="bg-white rounded-3xl shadow-md w-full max-w-sm text-center p-6">
+        <!-- Bot Avatar -->
+        <div class="flex justify-center mb-4">
+          <img
+            src="../assets/bot-avatar.svg"
+            alt="Robot Avatar"
+            class="w-24 h-24 rounded-full "
+          />
+        </div>
+        <!-- Bot Info -->
+        <h2 class="text-xl font-semibold text-gray-800">Одил</h2>
+        <p class="text-gray-500 text-sm mb-2">мушовири ҳуқуқӣ</p>
+
+        <!-- Options -->
+        
+
+      </div>
+
+
+      <div class="flex flex-col space-y-3 mt-3">
+            <button class="bg-white border-mine2  rounded-full px-4 py-2 text-sm font-medium hover:bg-cyan-50">
+                Чӣ гуна шахси воқеӣ (ЭП) сабтином карда мешавад?
+            </button>
+            <button class="bg-white border-mine2  rounded-full px-4 py-2 text-sm font-medium hover:bg-cyan-50">
+                Агар маро боздошт кунанд, чӣ бояд кунам?
+            </button>
+            <button class="bg-white border-mine2 rounded-full px-4 py-2 text-sm font-medium hover:bg-cyan-50">
+                Чӣ гуна шаҳодатномаи ронандагӣ мегирам?
+            </button>
+            <button class="bg-white border-mine2 rounded-full px-4 py-2 text-sm font-medium hover:bg-cyan-50">
+                Агар касе ба ман пора пешниҳод кунад, чӣ кор кунам?
+            </button>
+        </div>
+
+    </main>
+
+    
+
+    <!-- Chat Input -->
+    <footer class="w-full fixed bottom-0 ">
+      <div class="flex items-center w-full bg-white  shadow-md px-4 py-2">
+        
+        <textarea 
+            placeholder="имруз ман бо як муаммое ..."
+            rows="1"
+            class="flex-1 text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none text-sm"
+          ></textarea>
+        <button class="p-2">
+          <img src="../assets/send.svg" alt="">
+        </button>
+      </div>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "ChatbotScreen",
+};
+</script>
