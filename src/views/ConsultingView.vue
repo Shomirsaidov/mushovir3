@@ -53,7 +53,7 @@
 
     <!-- Chat Input -->
     <footer class="w-full fixed bottom-0">
-      <div class="flex items-center w-full bg-white shadow-md px-4 py-2">
+      <div class="flex items-center w-full bg-white shadow-md px-4 py-2 pb-6">
         <textarea
           placeholder="имрӯз ман бо як муаммое ..."
           rows="1"
@@ -62,7 +62,7 @@
           class="flex-1 text-gray-700 placeholder-gray-400 bg-transparent focus:outline-none text-sm"
         ></textarea>
         <button @click="handleSubmit" class="p-2">
-          <img src="../assets/send.svg" alt="Send" />
+          <img width="30" src="../assets/send.svg" alt="Send" />
         </button>
       </div>
     </footer>
