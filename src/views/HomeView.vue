@@ -5,13 +5,13 @@
         <div class="p-5 space-y-20">
             <div class="flex justify-between items-center">
                 <div class="rounded-full">
-                    <img src="../assets/profile-white.svg" width="36" alt="">
+                    <img @click="() => this.$router.push('/auth')" src="../assets/profile-white.svg" width="36" alt="">
                 </div>
                 <img src="../assets/tjk.png" width="45" class="rounded-xl" alt="">
             </div>
 
             <div class="space-y-10">
-                <h2 class="text-start font-bold text-white text-2xl ">Руз ба хайр, Лутфулло !</h2>
+                <h2 class="text-start font-bold text-white text-2xl ">Руз ба хайр, {{ this.$store.state.user.name }} !</h2>
 
                 <div class="flex bg-white items-center p-4 rounded-[23px] space-x-2 shadow shadow-white font-semibold">
                     <input placeholder="саволи ҳуқуқӣ е қонуни ҶТ" type="text" class="flex-1 outline-none">
@@ -27,7 +27,7 @@
                 <div class="flex p-4 border-b items-center justify-between">
                     <div class="flex items-center space-x-3">
                         <img src="../assets/bell.svg" alt="">
-                        <div class="font-semibold">Иловаю тағйиротҳо</div>
+                        <div @click="() => this.$router.push('/updates')" class="font-semibold">Иловаю тағйиротҳо</div>
                     </div>
                     <div class="rounded-full p-1 px-[10px] text-sm bg-red-400 text-white font-semibold">4</div>
                 </div>
@@ -46,19 +46,19 @@
 
 
             <div class="flex text-xs overflow-x-auto snap-x snap-mandatory gap-3 px-4 py-6 scroll-smooth scrollbar-hide">
-                <div class="snap-start px-6 w-full space-y-3 border-2 flex flex-col items-center justify-center rounded-xl font-bold">
+                <div @click="() => this.$router.push('/health')" class="snap-start px-6 w-full space-y-3 border-2 flex flex-col items-center justify-center rounded-xl font-bold">
                     <img src="../assets/shield.svg" alt="">
-                    <div >саломатии ҳуқуқӣ</div>
+                    <div>саломатии ҳуқуқӣ</div>
                 </div>
-                <div class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
+                <div @click="() => this.$router.push('/navigate')" class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
                     <img src="../assets/navigate.svg" alt="">
                     <div>қонунҳоро ҷустуҷу намоед</div>
                 </div>
-                <div class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
+                <div @click="() => this.$router.push('/docs/check')" class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
                     <img src="../assets/docs.svg" alt="">
                     <div>ҳуҷҷатҳоро бисанҷед</div>
                 </div>
-                <div class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
+                <div @click="() => this.$router.push('/ai')" class="snap-start px-6 w-full space-y-3 border-2  flex flex-col items-center justify-center rounded-xl font-bold">
                     <img src="../assets/chat.svg" alt="">
                     <div>муошират бо мушовири мо</div>
                 </div>

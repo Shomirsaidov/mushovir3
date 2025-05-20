@@ -27,6 +27,32 @@ const routes = [
     path: '/navigate',
     name: 'Navigate',
     component: () => import(/* webpackChunkName: "about" */ '../views/NavigateView.vue')
+  },
+  {
+    path: '/docs/check',
+    name: 'CheckDoc',
+    component: () => import('../views/CheckerView.vue')
+  },
+  {
+    path: '/docs/patterns',
+    name: 'Patterns',
+    component: () => import('../views/PatternChooseView.vue')
+  },
+  {
+    path: '/docs/check/results',
+    name: 'CheckResults',
+    component: () => import('../views/CheckResultsView.vue')
+  },
+  {
+    path: '/auth',
+    name: 'Auth',
+    component: () => import('../views/AuthView.vue')
+  }
+  ,
+  {
+    path: '/updates',
+    name: 'Updates',
+    component: () => import('../views/UpdatesView.vue')
   }
 ]
 

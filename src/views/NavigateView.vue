@@ -22,7 +22,7 @@
           </div>
 
           <div v-if="openSection === 'kodeks'" class="text-blue2 font-semibold text-lg text-start mt-5 mb-3 space-y-3">
-            <div>Кодекси ҷиноятӣ</div>
+            <a href="http://base.mmk.tj/view_sanadhoview.php?export=html&sanadID=23">Кодекси ҷиноятӣ</a>
             <div>Кодекси мурофивии ҷиноятӣ</div>
             <div>Кодекси шаҳрвандӣ</div>
             <div>Кодекси меҳнат</div>
@@ -46,7 +46,7 @@
 
           <div v-if="openSection === 'qonun'" class="text-blue2 font-semibold text-lg text-start mt-5 mb-3 space-y-3">
             <div>Дар бораи судҳо</div>
-            <div>Дар бораи интихобот</div>
+            <a href="http://base.mmk.tj/view_sanadhoview.php?export=html&sanadID=620">Дар бораи авф</a>
             <div>Дар бораи Президент</div>
             <div>Дар бораи савдои электронӣ</div>
             <div>Дар бораи муҳоҷират</div>
@@ -110,5 +110,9 @@ export default {
 .rotate-180 {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+}
+
+a {
+  display: block;
 }
 </style>

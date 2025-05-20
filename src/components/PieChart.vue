@@ -14,7 +14,6 @@ import {
 } from 'chart.js'
 import { Pie } from 'vue-chartjs'
 
-// Register only the required components
 ChartJS.register(Title, Tooltip, Legend, ArcElement)
 
 export default {
@@ -22,20 +21,31 @@ export default {
   components: {
     Pie
   },
-  data() {
-    return {
-      chartData: {
+  props: {
+    proportions: {
+      type: Array,
+      required: true,
+      validator: (value) => value.length === 2 && value.every(v => typeof v === 'number')
+    }
+  },
+  computed: {
+    chartData() {
+      return {
         datasets: [
           {
             label: 'Вазъи ҳуқуқӣ',
             backgroundColor: ['#10B981', '#FFAFA3'],
-            data: [70, 30]
+            data: this.proportions
           }
         ]
-      },
+      }
+    }
+  },
+  data() {
+    return {
       chartOptions: {
         responsive: true,
-        cutout: '50%', // 👈 Makes it a ring chart
+        cutout: '50%',
         plugins: {
           legend: {
             position: 'bottom'
