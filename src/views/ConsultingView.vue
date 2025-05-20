@@ -35,7 +35,7 @@
 
       <!-- Chat Messages -->
       <div class="mt-4 w-full max-w-sm space-y-2 px-1 overflow-y-auto">
-        <div v-for="(msg, i) in messages" :key="i" class="text-sm">
+        <div v-for="(msg, i) in messages.filter((_, index) => index !== 0)" :key="i" class="text-sm" >
           <div
             :class="msg.role === 'user' ? 'text-right' : 'text-left text-gray-700'"
           >
@@ -82,7 +82,18 @@ export default {
         "Чӣ гуна шаҳодатномаи ронандагӣ мегирам?",
         "Агар касе ба ман пора пешниҳод кунад, чӣ кор кунам?",
       ],
-      messages: [],
+      messages: [
+        {role: 'user', content: `you are a tajik assitant by name Odil for our legislative platform mushovir.tj . your task is to clarify the situationof the user and give advices with references from the law of tajikistan. (never say you have no reference article). here is sample reference you can use: 
+        
+        Моддаи 365 – Шакли шартнома
+
+        1. Шартнома метавонад дар шакли шифоҳӣ ё хаттӣ баста шавад.
+        2. Шакли хаттӣ ҳатмӣ аст, агар қонун ё созишнома онро талаб кунад.
+        3. Шартномаи шифоҳӣ танҳо дар ҳолатҳои муқаррарнамудаи қонун эътибор дорад (масалан, шартномаҳои ба маблағи кам).
+        
+        
+        `}
+      ],
     };
   },
   methods: {
